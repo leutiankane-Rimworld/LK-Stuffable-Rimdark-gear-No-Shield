@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorHelmetBase"]</xpath>
+		<value>
+		<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorHelmetBase"]</xpath>
+		<value>
+		<costStuffCount>100</costStuffCount>
+		</value>
+	</Operation>
+  <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<costStuffCount>100</costStuffCount>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/statBases</xpath>
+		<nomatch Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]</xpath>
+		<value>
+		<statBases />
+		</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="BEWH_PowerArmorBase"]/statBases</xpath>
+	<value>
+	<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+    <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
+    <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
+	</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name=""BEWH_PowerArmorHelmetBase"]/statBases</xpath>
+		<nomatch Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name=""BEWH_PowerArmorHelmetBase"]</xpath>
+		<value>
+		<statBases />
+		</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name=""BEWH_PowerArmorHelmetBase"]/statBases</xpath>
+	<value>
+	<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+    <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
+    <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
+	</value>
+	</Operation>
+	
+	
+	
+  
+</Patch>
